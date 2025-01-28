@@ -1,0 +1,544 @@
+@font-path: "../assets/fonts"; // Adjust this to your font's directory
+
+.font-face(@name, @fileName, @weight, @style: normal) {
+  @font-face {
+    font-family: @name;
+    src: url("@{font-path}/@{fileName}.ttf") format("truetype");
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+// Define the font with different weights
+
+.font-face("Lato", "Lato-Hairline", 100); // Thin weight
+.font-face("Lato", "Lato-Thin", 200); // Ultra Light weight
+.font-face("Lato", "Lato-Light", 300); // Light weight
+.font-face("Lato", "Lato-Regular", 400); // Regular weight
+.font-face("Lato", "Lato-Medium", 500); // Medium weight
+.font-face("Lato", "Lato-Semibold", 600); // Semibold weight
+.font-face("Lato", "Lato-Bold", 700); // Bold weight
+.font-face("Lato", "Lato-Heavy", 800); // Extra Bold weight
+.font-face("Lato", "Lato-Black", 900); // Heavy weight
+.font-face("Felix Titling", "FELIXTI", 400);
+@primaryColor: #243230;
+@secondaryColor: #636363;
+@ceramic: #fffef2;
+@whiteColor: #ffffff;
+@whiteRock: #f0e5d6;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+  @media screen {
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif !important;
+  overflow-x: hidden;
+  margin: 0;
+}
+.font-color-primary {
+  color: @primaryColor !important;
+}
+.font-color-secondary {
+  color: @secondaryColor !important;
+}
+.font-color-ceramic {
+  color: @ceramic !important;
+}
+.font-color-white-rock {
+  color: @whiteRock !important;
+}
+.bg-color-primary {
+  background-color: @primaryColor !important;
+}
+.bg-color-ceramic {
+  background-color: @ceramic !important;
+}
+.fs-10 {
+  font-size: 0.625rem !important;
+}
+
+.fs-12 {
+  font-size: 0.75rem !important;
+}
+
+.fs-13 {
+  font-size: 0.813rem !important;
+}
+
+.fs-14 {
+  font-size: 0.875rem !important;
+}
+
+.fs-15 {
+  font-size: 0.938rem !important;
+}
+
+.fs-16 {
+  font-size: 1rem !important;
+}
+
+.fs-17 {
+  font-size: 1.063rem !important;
+}
+
+.fs-18 {
+  font-size: 1.125rem !important;
+}
+
+.fs-20 {
+  font-size: 1.25rem !important;
+}
+
+.fs-22 {
+  font-size: 1.375rem !important;
+}
+
+.fs-24 {
+  font-size: 1.5rem !important;
+}
+
+.fs-26 {
+  font-size: 1.625rem !important;
+}
+
+.fs-28 {
+  font-size: 1.75rem !important;
+}
+
+.fs-30 {
+  font-size: 1.875rem !important;
+}
+
+.fs-32 {
+  font-size: 2rem !important;
+}
+
+.fs-34 {
+  font-size: 2.125rem !important;
+}
+.fs-35 {
+  font-size: 2.188rem !important;
+}
+
+.fs-36 {
+  font-size: 2.25rem !important;
+}
+
+.fs-40 {
+  font-size: 2.5rem !important;
+}
+
+.fs-42 {
+  font-size: 2.625rem !important;
+}
+
+.fs-50 {
+  font-size: 3.125rem !important;
+}
+
+.fs-55 {
+  font-size: 3.438rem !important;
+}
+
+.fw-100 {
+  font-weight: 100 !important;
+}
+
+.fw-200 {
+  font-weight: 200 !important;
+}
+
+.fw-300 {
+  font-weight: 300 !important;
+}
+
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+// .font-weight-600 {
+//   font-weight: 600 !important;
+// }
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.fw-800 {
+  font-weight: 800 !important;
+}
+
+.fw-900 {
+  font-weight: 900 !important;
+}
+.font-family-felix-titling {
+  font-family: "Felix Titling", sans-serif !important;
+}
+.primary-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  &:extend(.fs-14);
+  &:extend(.fw-500);
+  color: @ceramic !important;
+  background: @primaryColor !important;
+  height: 3.188rem;
+  border-radius: 0.313rem;
+  padding: 0 1.75rem;
+  text-decoration: none;
+  transition: transform 0.8s ease, letter-spacing 0.8s ease;
+  &:hover {
+    letter-spacing: 0.125rem;
+  }
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  nav {
+    flex-direction: column;
+    @media screen {
+      @media (max-width: 991px) {
+        flex-direction: row;
+      }
+    }
+    .navbar-brand {
+      margin: 0;
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            &:extend(.fs-18);
+            &:extend(.fw-500);
+            &:extend(.font-color-ceramic);
+          }
+        }
+      }
+    }
+  }
+}
+.main-banner-slider-wrapper {
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        padding: 20% 0 10rem;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        position: relative;
+        &::before {
+          content: "";
+          background-color: #00000080;
+          position: absolute;
+          inset: 0;
+        }
+        @media screen {
+          @media (max-width: 991px) {
+            padding: 30% 0 10rem;
+          }
+          @media (max-width: 576px) {
+            padding: 40% 0 5rem;
+          }
+        }
+        &.carousel-item-1 {
+          background-image: url(../assets/images/main_banner_img.png);
+          @supports (background-image: url("image.webp")) {
+            background-image: url("../assets/images/main_banner_img.webp");
+          }
+        }
+        &.carousel-item-2 {
+          background-image: url(../assets/images/main_banner_img.png);
+          @supports (background-image: url("image.webp")) {
+            background-image: url("../assets/images/main_banner_img.webp");
+          }
+        }
+        &.carousel-item-3 {
+          background-image: url(../assets/images/main_banner_img.png);
+          @supports (background-image: url("image.webp")) {
+            background-image: url("../assets/images/main_banner_img.webp");
+          }
+        }
+        .carousel-caption {
+          position: inherit;
+          padding: 0;
+          left: 0;
+          right: 0;
+          padding: 0 1rem;
+          h3 {
+            font-family: "Felix Titling", sans-serif !important;
+            font-size: 3rem;
+            &:extend(.fw-400);
+            color: @whiteColor;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            @media screen {
+              @media (max-width: 576px) {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+              }
+            }
+          }
+          .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            margin: auto;
+            &:extend(.fs-14);
+            &:extend(.fw-500);
+            &:extend(.font-color-ceramic);
+            &:extend(.bg-color-primary);
+            height: 3.188rem;
+            border-radius: 0.313rem;
+            padding: 0 1.75rem;
+            text-decoration: none;
+            transition: transform 0.8s ease;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+    .carousel-indicators {
+      gap: 0.75rem;
+      margin: auto;
+      bottom: 3.75rem;
+      @media screen {
+        @media (max-width: 576px) {
+          bottom: 1.5rem;
+        }
+      }
+      button {
+        width: 0.688rem;
+        height: 0.688rem;
+        border-radius: 50%;
+        margin: 0;
+      }
+    }
+  }
+}
+.about-us-wrapper {
+  padding: 7.5rem 0 6.25rem;
+  @media screen {
+    @media (max-width: 991px) {
+      padding: 3.5rem 0;
+    }
+  }
+  &:extend(.bg-color-ceramic);
+  img {
+    margin-top: 6.25rem;
+    @media screen {
+      @media (max-width: 991px) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+.dining-destination-wrapper {
+  &:extend(.bg-color-primary);
+  padding: 4.75rem 0 4.375rem;
+
+  .dining-destination-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3.75rem;
+    padding: 4.188rem 6.25rem 4.188rem;
+    position: relative;
+    &::before {
+      content: url(../assets/images/wave_img.png);
+      position: absolute;
+      width: 10rem;
+      height: 3.75rem;
+      display: block;
+      bottom: 0;
+      left: 6.25rem;
+      @media screen {
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+    &::after {
+      content: url(../assets/images/wave_img.png);
+      position: absolute;
+      width: 10rem;
+      height: 3.75rem;
+      display: block;
+      top: -2rem;
+      right: 6.25rem;
+      @media screen {
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+    @media screen {
+      @media (max-width: 991px) {
+        padding: 2rem 2rem;
+      }
+    }
+    h3 {
+      font-size: 2.5rem;
+      @media screen {
+        @media (max-width: 768px) {
+          font-size: 1.563rem;
+        }
+      }
+    }
+    .dining-btn-left {
+      width: 5.25rem;
+      padding: 0;
+      @media screen {
+        @media (max-width: 991px) {
+          position: absolute;
+          left: 2rem;
+          bottom: -2rem;
+        }
+      }
+    }
+    .dining-btn-right {
+      width: 5.25rem;
+      padding: 0;
+      @media screen {
+        @media (max-width: 991px) {
+          position: absolute;
+          right: 2rem;
+          bottom: -2rem;
+        }
+      }
+    }
+    ul {
+      flex-grow: 1;
+      display: flex;
+      gap: 3.125rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      white-space: nowrap;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      @media screen {
+        @media (max-width: 991px) {
+          gap: 1.5rem;
+        }
+      }
+      li {
+        flex-shrink: 0;
+        width: 27.25rem;
+        height: auto;
+        position: relative;
+        padding-bottom: 3.5rem;
+        @media screen {
+          @media (max-width: 991px) {
+            width: 18.75rem;
+          }
+        }
+        img {
+          width: 100%;
+        }
+        .dining-destination-card {
+          background: @whiteColor;
+          padding: 2.375rem;
+          backdrop-filter: blur(20px);
+          border-radius: 0.313rem;
+          height: 7.875rem;
+          overflow: hidden;
+          max-height: 7.875rem;
+          position: absolute;
+          bottom: 0rem;
+          left: 1.5rem;
+          right: 10%;
+          transition: max-height 0.8s ease;
+          @media screen {
+            @media (max-width: 991px) {
+              left: 1rem;
+              right: 1rem;
+              padding: 1.375rem;
+              height: 5.875rem;
+              max-height: 5.875rem;
+              bottom: 0.5rem;
+            }
+          }
+          &:hover {
+            max-height: 20rem;
+            height: auto;
+          }
+          h5 {
+            @media screen {
+              @media (max-width: 991px) {
+                font-size: 1.25rem !important;
+              }
+            }
+          }
+          p {
+            @media screen {
+              @media (max-width: 991px) {
+                font-size: 1rem !important;
+              }
+            }
+          }
+          .dining-destination-card-content {
+            padding-top: 1.75rem;
+            @media screen {
+              @media (max-width: 991px) {
+                padding-top: 1.2rem;
+              }
+            }
+            p {
+              white-space: wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+  .view-more-btn {
+    background: @whiteColor !important;
+    color: @primaryColor !important;
+    @media screen {
+      @media (max-width: 576px) {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+.gallery-view-section-wrapper {
+  padding: 4.625rem 0 8.75rem;
+  &:extend(.bg-color-primary);
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3.125rem;
+    @media screen {
+      @media (max-width: 768px) {
+        font-size: 1.563rem;
+      }
+    }
+  }
+}
