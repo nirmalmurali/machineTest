@@ -1,1 +1,1 @@
-# Please remove machineTest.less file in styles before run
+# Please remove the machineTest.less file from the styles folder before running.
